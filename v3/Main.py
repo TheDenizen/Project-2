@@ -18,10 +18,7 @@ pygame.init()
 ######################################################################
 ### TODO: Add up and down button.                                   ##
 ### TODO: Think of how a player moves from one surface to the other.##
-<<<<<<< Updated upstream
 ### TODO: Card ideas -right> screen-------DONE                      ##
-=======
->>>>>>> Stashed changes
 ### TODO: Add turn logic                                            ##
 ### TODO: Visual element which shows who's turn it is               ##
 ### TODO: Color list with playernames next to it.                   ##
@@ -49,7 +46,6 @@ class Main():
         self.up = Block(50,250,(BLACK))
         self.cards = Block(328, 700, (BLACK))
         self.player_colors = [LIME, PURPLE, MAROON, TEAL]
-
 
     def bp_init(self, tp = None, y_range = 2, fp = 50, block_dict = None, size = (50, 25), block_colors = [(0,0,255), (255,0,0), (255,255,0), (0,0,0)]):
         
@@ -215,7 +211,6 @@ class Main():
                 h += 20
             pygame.display.update()
             self.clock.tick(15)
-            # please delete me
 
         else:
             self.quit_game()
@@ -264,14 +259,9 @@ class Main():
         while not self.quit_condition():
             if len(self.players) != self.player_count:
                 for i in range(self.player_count):
-<<<<<<< Updated upstream
                     temp = Player(10, 10, self.player_colors[i])
-                    self.players.setdefault(inputbox.ask(display, "Naam van Speler " + str(i + 1)), {'init_rol': self.dice(), 'sprite': temp})
-=======
-                    temp = Player(10, 10, player_colors[i])
                     self.players.setdefault(inputbox.ask(display, "Naam van Speler " + str(i + 1)), {'init_rol': self.init_rolls[i], 'sprite': temp})
-                    
->>>>>>> Stashed changes
+
             else:
                 self.init = False
                 print(self.players)
